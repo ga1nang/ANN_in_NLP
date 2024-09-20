@@ -5,16 +5,16 @@ import pandas as pd
 import pickle
 
 ## load the trained model, scaler pickle, onehot
-model = tf.keras.models.load_model('E:/data_scien/course/Complete_genai_langchain_huggingface/learn/ANN_project/model/model.h5')
+model = tf.keras.models.load_model('model/model.h5')
 
 ## load the encoder and scaler
-with open('E:/data_scien/course/Complete_genai_langchain_huggingface/learn/ANN_project/model/onehot_encoder_geo.pkl', 'rb') as file:
+with open('model/onehot_encoder_geo.pkl', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
     
-with open('E:/data_scien/course/Complete_genai_langchain_huggingface/learn/ANN_project/model/label_encoder_gender.pkl', 'rb') as file:
+with open('model/label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
     
-with open('E:/data_scien/course/Complete_genai_langchain_huggingface/learn/ANN_project/model/scaler.pkl', 'rb') as file:
+with open('model/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
     
 #streamlit app
